@@ -1,0 +1,202 @@
+.product-item {
+    overflow: hidden;
+    > h2 {
+        color: $green;
+        font-weight: 400;
+        font-size: 2.8em;
+        margin-top: 0;
+        @include mQuery(992px) {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    .price{
+        font-size: 16px;
+        white-space: nowrap;
+        position: relative;
+        margin: 0 5px 18px 18px;
+        display: inline-block;
+        height: 38px;
+        border-radius: 11px 5px 5px 11px;
+        padding: 0 10px 0 18px;
+        background: #95BB04;
+        border: 0 solid #C7D2D4;
+        color: #fff;
+        line-height: 36px;
+    }
+    .price:before{
+        position: absolute;
+        content: "";
+        color: white;
+        top: 1px;
+        bottom: 1px;
+        margin: auto;
+        left: -12px;
+        border-right: 18px solid #95bb04;
+        border-top: 17px solid transparent;
+        border-bottom: 17px solid transparent;
+    }
+    .price:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background-color: #fff;
+        border-radius: 50%;
+        left: 2px;
+        top: 0;
+        margin: auto;
+        bottom: 0;
+        font-size: 21px;
+    }
+    .phones {
+        background-color: #f2f2f2;
+        padding: 2px 10px;
+        font-size: 16px;
+        overflow: hidden;
+        @include mQuery(450px) {
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+        > a {
+            display: block;
+            text-align: right;
+            color: #000;
+            margin: 3px 0;
+            @include mQuery(450px) {
+                float: right;
+                &:first-child {
+                    margin-left: 20px;
+                }
+            }
+            img {
+                height: 15px;
+                margin-right: 5px;
+                vertical-align: baseline;
+            }
+        }
+    }
+}
+.product-info {
+    @include mQuery (992px) {
+        margin-left: 53%;
+        overflow: hidden;
+    }
+    .nav-tabs {
+        > li {
+            &.active {
+                a {
+                    color: $green;
+                }
+            }
+            > a {
+                color: $text-default;
+                font-size: 14px;
+                text-transform: none;
+                padding: 10px 8px;
+            }
+        }
+    }
+    .tab-pane {
+        padding: 5% 0;
+    }
+}
+.btn-send-confirm {
+  margin: 26px auto 17px;
+  display: block;
+  position: relative;
+  left: -40px;
+  padding: 7px 8px 8px;
+  @include mQuery (450px) {
+    left: -43px;
+  }
+}
+.btn-send-message {
+  margin: 0 auto;
+  display: block;
+  max-width: 80px;
+  position: relative;
+  left: 86px;
+  @include mQuery (450px) {
+      left: 98px;
+    }
+  top: -85px;
+  padding: 7px 8px 8px;
+
+  &,&:focus {
+    background-color: #5f5f5f;
+  }
+  .collapsing + &{
+    display: none;
+  }
+  &.collapsed {
+    display: block;
+    position: static;
+    max-width: 200px;
+    background-color: $red;
+
+    span:first-child {
+      display: block;
+    }
+    span:last-child {
+      display: none;
+    }
+  }
+  span:first-child {
+    display: none;
+  }
+  span:last-child {
+    display: block;
+  }
+}
+.send-message-form {
+    margin: 40px auto 10px;
+    position: relative;
+    overflow: hidden;
+    max-width: 500px;
+    @include mQuery (992px) {
+        min-width: 48%;
+    }
+    textarea {
+        resize: none;
+        height: 7em;
+    }
+    .collapse {
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        transition: opacity .5s;
+    }
+    .collapsing {
+        opacity: 0;
+    }
+    .well {
+        background-color: #fff;
+        padding: 10px 15px;
+        @include mQuery (450px) {
+            padding:10px 26px;
+        }
+    }
+    h3 {
+        text-align: center;
+        font-weight: 400;
+        color: $green;
+    }
+    ul {
+        padding-left:0;
+        li {
+            list-style-type: none;
+        }
+        label {
+            font-weight: 400;
+            margin: 13px 0 2px;
+        }
+    }
+}
+.gallery-product {
+    @include mQuery (992px) {
+        width: 49%;
+        float: left;
+        margin-right: 3%;
+    }
+}

@@ -1,0 +1,96 @@
+.header {
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    text-align: right;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.7);
+    .header-inner {
+        padding: 0 4% 6px 0;
+        @include mQuery(600px) {
+            padding: 2px 4%;
+        }
+        @include mQuery(1066px) {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 2px 0;
+        }
+
+        > div {
+            @include mQuery(600px) {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0 0 3%;
+            }
+        }
+    }
+    .email-top,
+    .phones {
+        display: inline-block;
+        margin: 5px 0;
+    }
+    .email-top {
+        // color: $green;
+        text-decoration: underline;
+    }
+    .phones {
+        > a {
+            color: #000;
+            margin: 0 5px;
+            padding: 7px 0;
+            @include mQuery(600px) {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+    .cellular-logo {
+        height: 16px;
+    }
+}
+.reach-btn-wrap {
+    // position: relative;
+}
+.reach-us-menu {
+    // position: absolute;
+    // top: 100%;
+    // right: 0;
+    // z-index: 9999;
+    // background-color: #fff;
+    // box-shadow: 0 0 4px 0px #000;
+    // padding: 0 12px 12px;
+    // border-radius: 4px;
+    // div[class^='input-'] {
+    //     margin-top: 23px;
+    //     position: relative;
+    //     label {
+    //         font-weight: normal;
+    //         position: absolute;
+    //         top: 3px;
+    //         left: 7px;
+    //         -webkit-transition: top 300ms, left 300ms;
+    //            -moz-transition: top 300ms, left 300ms;
+    //                 transition: top 300ms, left 300ms;
+    //         color: #b5b5b5;
+    //     }
+    //     input, textarea {
+    //         border: 1px solid #d4d4d4;
+    //         border-radius: 3px;
+    //     }
+    //     textarea {
+    //         height: 50px;
+    //         resize: none;
+    //     }
+    //     input:focus + label,
+    //     textarea:focus + label {
+    //         top: -18px;
+    //         left: 3px;
+    //         font-size: 12px;
+    //     }
+    // }
+    // input {
+    //     width: 100%;
+    // }
+    // }
+}

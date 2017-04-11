@@ -1,0 +1,337 @@
+/* -- gallery  begin --*/
+.gallery-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include mQuery(450px) {
+    max-width: 600px;
+  }
+  @include mQuery(992px) {
+    max-width: 900px;
+  }
+}
+div.content {
+  /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+  display: none;
+  // width: 620px;
+  width: 100%;
+  // height: 403px;
+  margin: 0;
+  padding: 0px;
+  float: left;
+  overflow: hidden;
+  .gallery-main & {
+    @include mQuery(992px) {
+      width: 66%;
+      margin-right: 2%;
+    }
+  }
+  img {
+    position: relative;
+    z-index: 2;
+  }
+  a {
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+div.content,
+div.navigation {
+  a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: relative;
+      z-index: 1;
+    }
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      &.selected {
+        display: none !important;
+      }
+    }
+  }
+}
+
+div.controls a {
+  padding: 0px;
+}
+
+div.ss-controls {
+  float: left;
+  display: none;
+}
+
+div.nav-controls {
+  position: absolute;
+  left: 0px;
+  width: 596px;
+  bottom: 0px;
+  z-index: 1;
+  a.prev {
+    background: url(../images/prev.gif) no-repeat 0 0;
+    width: 39px;
+    height: 39px;
+    text-indent: -5000px;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    z-index: 11;
+    &:hover {
+      background: url(../images/prev-h.gif) no-repeat 0 0;
+    }
+  }
+  a.next {
+    background: url(../images/next.gif) no-repeat 0 0;
+    width: 39px;
+    height: 39px;
+    text-indent: -5000px;
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    z-index: 11;
+    &:hover {
+      background: url(../images/next-h.gif) no-repeat 0 0;
+    }
+  }
+}
+
+div.slideshow-container {
+  position: relative;
+  // height: 403px;
+  /* This should be set to be at least the height of the largest image in the slideshow */
+  z-index: 1;
+}
+
+div.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(images/loader.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 592px;
+  height: 470px;
+  /* This should be set to be at least the height of the largest image in the slideshow */ }
+
+div.slideshow {
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 65%;
+  }
+  span.image-wrapper {
+    display: block;
+    // width: 620px;
+    width: 100%;
+    // height: 403px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  a.advance-link {
+    display: block;
+    // width: 620px;
+    width: 100%;
+    // height: 403px;
+    /* This should be set to be at least the height of the largest image in the slideshow */
+    padding: 0;
+    margin: 0;
+    &:hover, 
+    &:active, 
+    &:visited {
+      text-decoration: none;
+    }
+    img {
+      padding: 0;
+      margin: 0;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+div.download {
+  float: right;
+}
+
+div.caption-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 596px;
+  height: 151px;
+}
+
+span.image-caption {
+  display: block;
+  position: absolute;
+  width: 596px;
+  height: 151px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+div.caption {
+  width: 536px;
+  height: 128px;
+  padding: 23px 30px 0 30px;
+  line-height: 18px;
+  font-size: 13px;
+  color: #fff;
+  h5 {
+    line-height: 18px;
+    font-size: 13px;
+    color: #fd003f;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  h6 {
+    line-height: 18px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: normal;
+    margin: 0 0 18px 0;
+  }
+}
+
+div#thumbs {
+  width: 100%;
+  // height: 403px;
+  overflow: hidden;
+  padding: 0 0 2%;
+  .gallery-main & {
+    @include mQuery(992px) {
+      width: 32%;
+      padding: 0;
+    }
+  }
+}
+
+ul.thumbs {
+  // float: right;
+  // width: 320px;
+  overflow: hidden;
+  margin-left: 0;
+  padding: 0;
+  height: auto;
+  // overflow: visible;
+  @include mQuery(450px) {
+    width: 102%;
+    margin-left: -1%;
+  }
+  li {
+    width: 32%;
+    // height: 121px;
+    float: left;
+    margin: 2% 0  0;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: top;
+    &:nth-of-type(3n-1) {
+      margin: 2% 2% 0;
+    }
+    @include mQuery(450px) {
+      width: 23%;
+      margin: 2% 1% 0;
+      &:nth-of-type(3n-1) {
+        margin: 2% 1% 0;
+      }
+    }
+    .gallery-main & {
+      @include mQuery(992px) {
+        width: 47%;
+        margin: 0;
+        margin-bottom: 6%;
+        &:nth-of-type(3n-1) {
+          margin: 0;
+          margin-bottom: 6%;
+        }
+        &:nth-of-type(2n) {
+          margin-left: 6%;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      border: none;
+      position: absolute;
+    }
+  }
+}
+
+a.thumb {
+  &:focus {
+    outline: none;
+  }
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 65%;
+    // @include mQuery(450px) {
+    //   padding-bottom: 65%;
+    // }
+    .gallery-main & {
+      @include mQuery(992px) {
+        padding-bottom: 70%;
+      }
+    }
+  }
+}
+
+div.pagination {
+  clear: both;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+div.top.pagination {
+  display: none;
+}
+
+div.navigation {
+  div.bottom {
+    display: none;
+  }
+} 
+
+div.pagination {
+  a,
+  span.current,
+  span.ellipsis {
+    padding: 0 4px;
+    font-weight: bold;
+    color: #fff;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #ffeaa8;
+  }
+  span.current {
+    color: #ffeaa8;
+  }
+  span.ellipsis {
+    border: none;
+    padding: 5px 0 3px 2px;
+  }
+}
+
+/* -- gallery end --*/
+

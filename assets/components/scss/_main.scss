@@ -1,0 +1,19 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    color: $text-default;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-image: url(../imgs/bg-small.jpg);
+    font-family: 'Roboto', sans-serif;
+    @include mQuery (769px) {
+        background-image: url(../imgs/bg-big.jpg);
+    }
+}
+a {
+    color: #95BB04;
+}

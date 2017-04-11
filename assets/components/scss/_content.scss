@@ -1,0 +1,15 @@
+.main {
+    background-color: #fff;
+    margin: 4% auto;
+    width: 92%;
+    padding: 3%;
+    @include mQuery(992px) {
+        max-width: 980px;
+    }
+    @include mQuery(1200px) {
+        margin: 54px auto;
+    }
+}
+.main-page-text {
+    text-align: center;
+}

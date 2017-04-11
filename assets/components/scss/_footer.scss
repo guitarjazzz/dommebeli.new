@@ -1,0 +1,41 @@
+.footer {
+    padding: 2% 4%;
+    @include mQuery(1200px) {
+        padding: 20px 4%;
+    }
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,fefefe+22,e7e7e7+57,e1e1e1+70,e1e1e1+100&0+0,0.97+0,1+1,1+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.97) 0%, rgba(255,255,255,1) 1%, rgba(254,254,254,1) 22%, rgba(231,231,231,1) 57%, rgba(225,225,225,1) 70%, rgba(225,225,225,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.97) 0%,rgba(255,255,255,1) 1%,rgba(254,254,254,1) 22%,rgba(231,231,231,1) 57%,rgba(225,225,225,1) 70%,rgba(225,225,225,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.97) 0%,rgba(255,255,255,1) 1%,rgba(254,254,254,1) 22%,rgba(231,231,231,1) 57%,rgba(225,225,225,1) 70%,rgba(225,225,225,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ffffff', endColorstr='#e1e1e1',GradientType=0 ); /* IE6-9 */
+    .address {
+        a {
+            color: #FE9A0F;
+        }
+        .phones {
+            a {
+                letter-spacing: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 1.2em;
+                border-radius: 4px;
+                padding: 4px 8px;
+                color: #0f0f0f;
+                margin: 5px 0;
+                display: inline-block;
+                span {
+                    background-image: url(../imgs/phone-outline.svg);
+                    background-repeat: no-repeat;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    background-size: 100%;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+}
+.footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+}
